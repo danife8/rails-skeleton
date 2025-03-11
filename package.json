@@ -1,0 +1,12 @@
+{
+  "name": "rails-skeleton",
+  "version": "1.0.0",
+  "description": "rails skeleton",
+  "main": "lib/assets/application.js",
+  "directories": {
+    "lib": "lib"
+  },
+  "devDependencies": {},
+  "author": "danife8",
+  "license": "ISC"
+}
