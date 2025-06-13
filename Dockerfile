@@ -42,19 +42,19 @@ RUN curl -sL https://github.com/nodenv/node-build/archive/master.tar.gz | tar xz
 COPY Gemfile Gemfile.lock ./
 RUN bundle install
 
-# Install node modules
-COPY package.json yarn.lock ./
-RUN yarn install --frozen-lockfile
-
 # Copy entrypoint
 COPY bin/docker-entrypoint /rails/bin/
 RUN chmod +x /rails/bin/docker-entrypoint
 
 # Run and own only the runtime files as a non-root user for security
 RUN addgroup -S rails && adduser -S rails -G rails \
-    && mkdir -p db log storage tmp \
-    && chown -R rails:rails db log storage tmp
+    && mkdir -p db log storage tmp node_modules \
+    && chown -R rails:rails db log storage tmp node_modules
 USER rails
+
+# Install node modules
+COPY package.json yarn.lock ./
+RUN yarn install --frozen-lockfile
 
 # Entrypoint prepares the database.
 ENTRYPOINT ["/rails/bin/docker-entrypoint"]
