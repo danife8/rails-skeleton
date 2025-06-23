@@ -49,7 +49,8 @@ RUN chmod +x /rails/bin/docker-entrypoint
 # Run and own only the runtime files as a non-root user for security
 RUN addgroup -S rails && adduser -S rails -G rails \
     && mkdir -p db log storage tmp node_modules \
-    && chown -R rails:rails db log storage tmp node_modules
+    && chown -R rails:rails db log storage tmp \
+    node_modules /usr/local/bundle
 USER rails
 
 # Install node modules
