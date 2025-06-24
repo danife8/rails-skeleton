@@ -13,6 +13,9 @@ AllCops:
     - bin/**/*
     - lib/**/*
     - config/**/*
+    - tmp/**/*
+    - vendor/**/*
+    - node_modules/**/*
 
 Style/FrozenStringLiteralComment:
   Enabled: false
