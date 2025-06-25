@@ -19,6 +19,7 @@ group :development, :test do
   gem 'annotate'
   gem 'brakeman', require: false
   gem 'debug', platforms: %i[mri windows], require: 'debug/prelude'
+  gem 'dotenv'
   gem 'factory_bot_rails'
   gem 'faker'
   gem 'rspec-rails', '~> 7.0.0'

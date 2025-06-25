@@ -3,6 +3,7 @@ This Rails skeleton project was created to speed-up the development of assessmen
 
 ### Start
 ##### Requirements
+- Copy `.env.example` file and rename it to `.env` for development environment.
 - Docker Engine to run containers. eg: Docker Desktop or [Colima](https://github.com/abiosoft/colima?tab=readme-ov-file#installation)
 ```shell
 colima start

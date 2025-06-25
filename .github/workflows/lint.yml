@@ -6,8 +6,9 @@ on:
     branches: [ main ]
 
 jobs:
-  lint:
+  backend-lint:
     runs-on: ubuntu-latest
+
     steps:
       - name: Checkout code
         uses: actions/checkout@v4
@@ -18,5 +19,5 @@ jobs:
           ruby-version: .ruby-version
           bundler-cache: true
 
-      - name: Lint code for consistent style
-        run: bin/rubocop -f github
+      - name: Running Rubocop
+        run: bin/rubocop -f github --config ./.rubocop.yml

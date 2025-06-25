@@ -18,6 +18,10 @@ default: &default
   # For details on connection pooling, see Rails configuration guide
   # https://guides.rubyonrails.org/configuring.html#database-pooling
   pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
+  username: <%= ENV.fetch("RAILS_DATABASE_USERNAME") { "postgres" } %>
+  password: <%= ENV.fetch("RAILS_DATABASE_PASSWORD") { "password" } %>
+  host: <%= ENV.fetch("DATABASE_HOST") { "localhost" } %>
+  port: <%= ENV.fetch("DATABASE_PORT") { 5432 } %>
 
 
 development:
@@ -81,5 +85,3 @@ test:
 production:
   <<: *default
   database: rails_skeleton_production
-  username: rails_skeleton
-  password: <%= ENV["RAILS_SKELETON_DATABASE_PASSWORD"] %>
