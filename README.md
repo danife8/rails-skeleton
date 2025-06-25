@@ -1,24 +1,36 @@
-# README
+# Rails Skeleton
+This Rails skeleton project was created to speed-up the development of assessments, challenges or maybe if you just want to try new things as a fullstack sandbox.
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+### Start
+##### Requirements
+- Copy `.env.example` file and rename it to `.env` for development environment.
+- Docker Engine to run containers. eg: Docker Desktop or [Colima](https://github.com/abiosoft/colima?tab=readme-ov-file#installation)
+```shell
+colima start
+```
+- Install [docker-compose](https://formulae.brew.sh/formula/docker-compose)
+```shell
+docker-compose build
+docker-compose up
+```
 
-Things you may want to cover:
+## Features
+- Ruby 3.3.7-alpine
+- Rails 7.2.0
+- Postgres 17-alpine
 
-* Ruby version
+###### Frontend
+- CSS: bootstrap
+- JS: esbuilder
+- Capybara tests
 
-* System dependencies
+###### Test environment
+- RSpec
+- Capybara
+- Faker
+- Factory bot
 
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+###### Other features
+- Rubocop
+- Annotate
+- Simplecov
