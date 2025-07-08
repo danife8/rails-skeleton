@@ -15,8 +15,8 @@ docker-compose up
 ```
 
 ## Features
-- Ruby 3.3.7-alpine
-- Rails 7.2.0
+- Ruby 3.4.2-alpine
+- Rails 8.0.2
 - Postgres 17-alpine
 
 ###### Frontend
